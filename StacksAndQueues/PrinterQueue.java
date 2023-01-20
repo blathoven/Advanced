@@ -1,5 +1,4 @@
 package StacksAndQueues;
-import java.sql.SQLOutput;
 import java.util.ArrayDeque;
 import java.util.Scanner;
 
@@ -26,6 +25,7 @@ public class PrinterQueue {
                 printerQueue.offer(printCommand);
             }
         }
+        
         for (String currentElement : printerQueue) {
             System.out.println(currentElement);
         }
