@@ -159,9 +159,7 @@ public class Calculator implements ActionListener {
         if (e.getSource().equals(clrButton)) {
             textField.setText("");
         }
-        if (result == 69) {
-            textField.setText("Sex");
-        }
+     
         if (e.getSource().equals(delButton)) {
             String string = textField.getText();
             textField.setText("");
