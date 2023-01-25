@@ -76,7 +76,7 @@ public class InfixToPostfix {
                 break;
             case "(":
             case ")":
-                precedence = 10;
+                precedence = 1;
         }
         return precedence;
     }
