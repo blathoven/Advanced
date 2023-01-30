@@ -10,26 +10,22 @@ public class CompareMatrices {
         int[] dimensions = Arrays.stream(scanner.nextLine().split("\\s+")).mapToInt(Integer::parseInt).toArray();
 
         int rows = dimensions[0];
-        int cols = dimensions[1];
 
-        int[][] firstMatrix = fillMatrix(rows, cols, scanner);
+        int[][] firstMatrix = fillMatrix(rows, scanner);
 
         dimensions = Arrays.stream(scanner.nextLine().split("\\s+")).mapToInt(Integer::parseInt).toArray();
 
         rows = dimensions[0];
-        cols = dimensions[1];
 
-        int[][] secondMatrix = fillMatrix(rows, cols, scanner);
+        int[][] secondMatrix = fillMatrix(rows, scanner);
 
-        if (matricesAreEqual(firstMatrix, secondMatrix)) {
-            System.out.println("equal");
-        } else {
-            System.out.println("not equal");
-        }
+        String output = matricesAreEqual(firstMatrix, secondMatrix) ? "equal" : "not equal";
+
+        System.out.println(output);
 
     }
-    public static int[][] fillMatrix(int rows, int cols, Scanner scanner) {
-        int[][] matrix = new int[rows][cols];
+    public static int[][] fillMatrix(int rows,  Scanner scanner) {
+        int[][] matrix = new int[rows][];
 
         for (int row = 0; row < rows; row++) {
 
